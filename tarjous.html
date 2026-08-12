@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pyydä tarjous — Pispalan Muuttopalvelu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">
+    <div class="logo-icon">
+      <a href="index.html"><img src="images/Designer (13).PNG" alt="Pispalan Muuttopalvelu Oy logo" width="48" height="32" style="width: 62px; height: 34px; object-fit:cover; display:block;"/></a>
+    </div>
+    <div class="logo-text">
+      <span>Pispalan</span>
+      <span>Muuttopalvelu</span>
+    </div>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Etusivu</a></li>
+    <li><a href="index.html#palvelut">Palvelut</a></li>
+    <li><a href="index.html">Lainalaatikot</a></li>
+    <li><a href="index.html#tietoa-meista">Tietoa meistä</a></li>
+    <li><a href="pyyda-tarjous.html" class="active">Pyydä tarjous</a></li>
+  </ul>
+
+  <a href="#tarjous.html" class="btn btn-primary">Pyydä tarjous</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <h1>Pyydä <span>maksuton tarjous</span></h1>
+  <p>Valitse tarvitsemasi palvelu ja täytä lomake. Lähetämme tarjouksen sähköpostiisi mahdollisimman pian.</p>
+</section>
+
+<div class="quote-wrap">
+
+  <div class="success-box" id="successBox">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+      <polyline points="22 4 12 14.01 9 11.01"/>
+    </svg>
+    <h3>Kiitos tarjouspyynnöstäsi!</h3>
+    <p>Olemme vastaanottaneet tietosi ja olemme sinuun yhteydessä pian.</p>
+  </div>
+
+  <form id="quoteForm" action="https://formspree.io/f/meebdqeo" method="POST" enctype="multipart/form-data">
+  <!-- <form id="quoteForm" action="https://formspree.io/f/xwvgqvae" method="POST" enctype="multipart/form-data"> -->
+
+    <input type="hidden" name="_subject" id="emailSubject" value="Uusi tarjouspyyntö: Kotimuutto">
+
+    <!-- SERVICE PICKER -->
+    <div class="service-picker">
+      <label>Mitä palvelua tarvitset? <span class="req">*</span></label>
+      <div class="service-tabs">
+        <label class="service-tab selected" data-service="kotimuutto">
+          <input type="radio" name="palvelu" value="Kotimuutto" checked required>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Kotimuutto</span>
+        </label>
+        <label class="service-tab" data-service="yritysmuutto">
+          <input type="radio" name="palvelu" value="Yritysmuutto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
+          <span>Yritysmuutto</span>
+        </label>
+        <label class="service-tab" data-service="lainalaatikot">
+          <input type="radio" name="palvelu" value="Lainalaatikot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg>
+          <span>Lainalaatikot</span>
+        </label>
+        <label class="service-tab" data-service="kokouspalvelut">
+          <input type="radio" name="palvelu" value="Kokouspalvelut">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Kokoamispalvelut</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- COMMON CONTACT INFO -->
+    <div class="form-section">
+      <h2>Yhteystiedot</h2>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nimi <span class="req">*</span></label>
+          <input type="text" name="Nimi" required>
+        </div>
+        <div class="form-group">
+          <label>Puhelinnumero <span class="req">*</span></label>
+          <input type="tel" name="Puhelinnumero" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Sähköpostiosoite <span class="req">*</span></label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label>Kampanjakoodi</label>
+          <input type="text" name="Kampanjakoodi">
+        </div>
+      </div>
+    </div>
+
+    <!-- KOTIMUUTTO -->
+    <div class="service-block active" data-service-block="kotimuutto">
+      <div class="form-section">
+        <h2>Mistä muutetaan</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Lähtöosoite huoneistonumeroineen</label>
+            <input type="text" name="Lähtöosoite">
+          </div>
+          <div class="form-group">
+            <label>Postinumero ja -toimipaikka</label>
+            <input type="text" name="Lähtö_postinumero">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Talotyyppi</label>
+            <div class="radio-group">
+              <label class="radio-item"><input type="radio" name="Lähtö_talotyyppi" value="Omakotitalo">Omakotitalo</label>
+              <label class="radio-item"><input type="radio" name="Lähtö_talotyyppi" value="Rivi-/paritalo">Rivi-/paritalo</label>
+              <label class="radio-item"><input type="radio" name="Lähtö_talotyyppi" value="Kerrostalo">Kerrostalo</label>
+              <label class="radio-item"><input type="radio" name="Lähtö_talotyyppi" value="Muu">Muu</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Kerros</label>
+            <input type="text" name="Lähtö_kerros">
+          </div>
+          <div class="form-group">
+            <label>Pinta-ala (m²)</label>
+            <input type="number" name="Lähtö_pinta_ala">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Muuttoajankohta</label>
+            <input type="date" name="Muuttoajankohta">
+          </div>
+          <div class="form-group">
+            <label>Muuttavien asukkaiden henkilömäärä</label>
+            <input type="number" name="Henkilömäärä">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Hissi</label>
+            <div class="radio-group">
+              <label class="radio-item"><input type="radio" name="Lähtö_hissi" value="Kyllä">Kyllä</label>
+              <label class="radio-item"><input type="radio" name="Lähtö_hissi" value="Ei">Ei</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Piano</label>
+            <div class="radio-group">
+              <label class="radio-item"><input type="radio" name="Piano" value="Kyllä">Kyllä</label>
+              <label class="radio-item"><input type="radio" name="Piano" value="Ei">Ei</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-row single">
+          <div class="form-group">
+            <label>Lisätietoja / muuta huomioitavaa</label>
+            <textarea name="Lähtö_lisätiedot"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Minne muutetaan</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Uusi osoite huoneistonumeroineen</label>
+            <input type="text" name="Kohdeosoite">
+          </div>
+          <div class="form-group">
+            <label>Postinumero ja -toimipaikka</label>
+            <input type="text" name="Kohde_postinumero">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Talotyyppi</label>
+            <div class="radio-group">
+              <label class="radio-item"><input type="radio" name="Kohde_talotyyppi" value="Omakotitalo">Omakotitalo</label>
+              <label class="radio-item"><input type="radio" name="Kohde_talotyyppi" value="Rivi-/paritalo">Rivi-/paritalo</label>
+              <label class="radio-item"><input type="radio" name="Kohde_talotyyppi" value="Kerrostalo">Kerrostalo</label>
+              <label class="radio-item"><input type="radio" name="Kohde_talotyyppi" value="Muu">Muu</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Kerros</label>
+            <input type="text" name="Kohde_kerros">
+          </div>
+          <div class="form-group">
+            <label>Pinta-ala (m²)</label>
+            <input type="number" name="Kohde_pinta_ala">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Hissi</label>
+            <div class="radio-group">
+              <label class="radio-item"><input type="radio" name="Kohde_hissi" value="Kyllä">Kyllä</label>
+              <label class="radio-item"><input type="radio" name="Kohde_hissi" value="Ei">Ei</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-row single">
+          <div class="form-group">
+            <label>Lisätietoja / muuta huomioitavaa</label>
+            <textarea name="Kohde_lisätiedot"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Lisäpalvelut</h2>
+        <div class="form-group">
+          <label>Valitse, mistä olet kiinnostunut</label>
+          <div class="checkbox-group">
+            <label class="checkbox-item"><input type="checkbox" name="Lisäpalvelu_pakkaus" value="Pakkauspalvelu">Pakkauspalvelu</label>
+            <label class="checkbox-item"><input type="checkbox" name="Lisäpalvelu_asennus" value="Asennuspalvelu">Asennuspalvelu (huonekalujen kasaus, taulujen kiinnitys)</label>
+            <label class="checkbox-item"><input type="checkbox" name="Lisäpalvelu_siivous" value="Muuttosiivous">Muuttosiivous</label>
+            <label class="checkbox-item"><input type="checkbox" name="Lisäpalvelu_varastointi" value="Varastointi">Varastointi</label>
+            <label class="checkbox-item"><input type="checkbox" name="Lisäpalvelu_kiiretys" value="Kiiretys">Kiiretys</label>
+            <label class="checkbox-item"><input type="checkbox" name="Lisäpalvelu_sovitus" value="Huonekalujen sovitus">Huonekalujen sovitus</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- YRITYSMUUTTO -->
+    <div class="service-block" data-service-block="yritysmuutto">
+      <div class="form-section">
+        <h2>Yrityksen tiedot</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Yrityksen nimi</label>
+            <input type="text" name="Yrityksen_nimi">
+          </div>
+          <div class="form-group">
+            <label>Yhteyshenkilön nimi</label>
+            <input type="text" name="Yhteyshenkilö">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Y-tunnus</label>
+            <input type="text" name="Y-tunnus">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Lähiosoite</label>
+            <input type="text" name="Yritys_osoite">
+          </div>
+          <div class="form-group">
+            <label>Postinumero ja -toimipaikka</label>
+            <input type="text" name="Yritys_postinumero">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Palveluntarve</h2>
+        <div class="form-group">
+          <label>Kuvaus palveluntarpeesta</label>
+          <div class="checkbox-group">
+            <label class="checkbox-item"><input type="checkbox" name="Yritys_suunnittelu" value="Suunnittelupalvelu">Suunnittelupalvelu</label>
+            <label class="checkbox-item"><input type="checkbox" name="Yritys_inventointi" value="Kalusteinventointi">Kalusteinventointi</label>
+            <label class="checkbox-item"><input type="checkbox" name="Yritys_muutto" value="Muuttopalvelu">Muuttopalvelu</label>
+            <label class="checkbox-item"><input type="checkbox" name="Yritys_muutostyot" value="Kalustuksen muutostyöt">Kalustuksen muutostyöt nykyisissä tiloissa</label>
+          </div>
+        </div>
+        <div class="form-row" style="margin-top:20px;">
+          <div class="form-group">
+            <label>Henkilö-/työpistemäärä</label>
+            <input type="number" name="Työpistemäärä">
+          </div>
+          <div class="form-group">
+            <label>Toivottu toteutusaika</label>
+            <input type="date" name="Yritys_toteutusaika">
+          </div>
+        </div>
+        <div class="form-row single">
+          <div class="form-group">
+            <label>Erityishuomiot</label>
+            <textarea name="Yritys_erityishuomiot"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LAINALAATIKOT -->
+    <div class="service-block" data-service-block="lainalaatikot">
+      <div class="form-section">
+        <h2>Muuttolaatikoiden vuokraustiedot</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Toimitusosoite</label>
+            <input type="text" name="Laatikot_osoite">
+          </div>
+          <div class="form-group">
+            <label>Postinumero ja -toimipaikka</label>
+            <input type="text" name="Laatikot_postinumero">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Tarvittava laatikkomäärä (arvio)</label>
+            <input type="number" name="Laatikkomäärä">
+          </div>
+          <div class="form-group">
+            <label>Talouden koko (huoneita)</label>
+            <input type="text" name="Laatikot_kokoluokka">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Vuokra-aika alkaa</label>
+            <input type="date" name="Vuokra_alkaa">
+          </div>
+          <div class="form-group">
+            <label>Vuokra-aika päättyy</label>
+            <input type="date" name="Vuokra_paattyy">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Toimitustapa</label>
+            <div class="radio-group">
+              <label class="radio-item"><input type="radio" name="Toimitustapa" value="Kotiinkuljetus">Kotiinkuljetus</label>
+              <label class="radio-item"><input type="radio" name="Toimitustapa" value="Nouto itse">Nouto itse</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-row single">
+          <div class="form-group">
+            <label>Lisätietoja</label>
+            <textarea name="Laatikot_lisätiedot"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KOKOUSPALVELUT -->
+    <div class="service-block" data-service-block="kokouspalvelut">
+      <div class="form-section">
+        <h2>Kokouspalvelun tiedot</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Haettava/ toimitettava tuote</label>
+            <input type="text" name="Tuote">
+          </div>
+          <div class="form-group">
+            <label>Haku osoite/ yritys</label>
+            <input type="text" name="Tavaran hakupaikka tai yritys">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Toivottu ajankohta</label>
+            <input type="date" name="Toivottu ajankohta">
+          </div>
+          <div class="form-group">
+            <label>Nouto linkki/ viesti</label>
+            <input type="text" name="Nouto koodi/teksti/kuva" placeholder="esim. Kuva noutoviestistä">
+          </div>
+        </div>
+        <div class="form-row single">
+          <div class="form-group">
+            <label>Liitä kuva noutoviestistä (valinnainen)</label>
+            <input type="file" name="Noutoviestin_kuva" accept="image/*">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Tarvittavat palvelut</label>
+          <div class="checkbox-group">
+            <label class="checkbox-item"><input type="checkbox" name="Kokous_tila" value="Toimituspalvelu">Toimituspalvelu</label>
+            <label class="checkbox-item"><input type="checkbox" name="Kokous_catering" value="Hakupalvelu">Hakupalvelu</label>
+            <label class="checkbox-item"><input type="checkbox" name="Kokous_av" value="Kokoaminen">Kokoaminen</label>
+            <label class="checkbox-item"><input type="checkbox" name="Kokous_jarjestely" value="Kalustejärjestelyt">Kalustejärjestelyt</label>
+          </div>
+        </div>
+        <div class="form-row single" style="margin-top:20px;">
+          <div class="form-group">
+            <label>Lisätietoja</label>
+            <textarea name="Kokous_lisätiedot"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="submit-row">
+      <button type="submit" class="btn btn-primary">Lähetä tarjouspyyntö</button>
+      <p class="submit-note">Lähettämällä lomakkeen hyväksyt, että otamme sinuun yhteyttä antamiisi yhteystietoihin.</p>
+    </div>
+
+  </form>
+</div>
+
+<!-- FULL FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-icon">
+          <a href="index.html"><img src="images/Designer (13).PNG" alt="Pispalan Muuttopalvelu Oy logo" style="width: 38px; height: 24px; object-fit:cover; display:block;"/></a>
+        </div>
+        <div class="logo-text">
+          <span>Pispalan</span>
+          <span>Muuttopalvelu Oy</span>
+        </div>
+      </div>
+      <p>Luotettava muuttofirma Tampereelta. Palvelemme yksityishenkilöitä ja yrityksiä ympäri Suomen – nopeasti, turvallisesti ja aina sovitusti.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://extra.muuttomaailma.fi/company/k70j0opk" class="social-btn" aria-label="Arvostelut">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Palvelut</h4>
+      <ul>
+        <li><a href="index.html#palvelut">Kotimuutot</a></li>
+        <li><a href="index.html#palvelut">Yritysmuutot</a></li>
+        <li><a href="index.html#palvelut">Muuttolaatikoiden vuokraus</a></li>
+        <li><a href="index.html#palvelut">Tavaroiden haku ja kokoamispalvelu</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Yritys</h4>
+      <ul>
+        <li><a href="index.html">Etusivu</a></li>
+        <li><a href="index.html#tietoa-meista">Tietoa meistä</a></li>
+        <li><a href="#">Hinnat</a></li>
+        <li><a href="#">Arvostelut</a></li>
+        <li><a href="pyyda-tarjous.html">Yhteys</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Yhteystiedot</h4>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6.29 6.29l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <a href="tel:+358405082820">040 508 2820</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <a href="mailto:tampere@lainalaatikko.fi">tampere@lainalaatikko.fi</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <span>Pispalan valtatie 27, Tampere<br>Palvelemme koko Suomessa</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span>Ma–Pe 9:00–16:00<br>La–Su Suljettu</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Pispalan Muuttopalvelu Oy. Kaikki oikeudet pidätetään.</span>
+    <div class="footer-bottom-links">
+      <a href="#">Tietosuojaseloste</a>
+      <a href="#">Käyttöehdot</a>
+      <a href="#">Evästeet</a>
+    </div>
+  </div>
+</footer>
+
+<div class="footer-trust-bar">
+  <div class="footer-trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    Vakuutettu muutto
+  </div>
+  <div class="footer-trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+    Kalusto kunnossa
+  </div>
+  <div class="footer-trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    Kokenut henkilökunta
+  </div>
+  <div class="footer-trust-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+    Tyytyväiset asiakkaat
+  </div>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.service-tab');
+  const blocks = document.querySelectorAll('.service-block');
+  const subjectField = document.getElementById('emailSubject');
+
+  // Disabloidaan (poistetaan lähetyksestä) kaikkien ei-aktiivisten
+  // palvelulohkojen kentät, jotta tyhjät/väärän palvelun tiedot eivät
+  // päädy sähköpostiin.
+  function syncBlockFields() {
+    blocks.forEach(block => {
+      const isActive = block.classList.contains('active');
+      block.querySelectorAll('input, textarea, select').forEach(field => {
+        field.disabled = !isActive;
+      });
+    });
+  }
+
+  // Alustetaan heti sivun latauduttua (kotimuutto on oletuksena valittuna)
+  syncBlockFields();
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const service = tab.getAttribute('data-service');
+
+      tabs.forEach(t => t.classList.remove('selected'));
+      tab.classList.add('selected');
+
+      blocks.forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-service-block') === service);
+      });
+
+      syncBlockFields();
+
+      const radio = tab.querySelector('input[type="radio"]');
+      subjectField.value = 'Uusi tarjouspyyntö: ' + radio.value;
+    });
+  });
+
+  // AJAX submit to Formspree so we can show a friendly confirmation
+  const form = document.getElementById('quoteForm');
+  const successBox = document.getElementById('successBox');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        successBox.classList.add('show');
+        successBox.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        alert('Lomakkeen lähetys epäonnistui. Ota yhteyttä puhelimitse tai sähköpostilla: tampere@lainalaatikko.fi');
+      }
+    })
+    .catch(() => {
+      alert('Lomakkeen lähetys epäonnistui. Ota yhteyttä puhelimitse tai sähköpostilla: tampere@lainalaatikko.fi');
+    });
+  });
+</script>
+
+</body>
+</html>
