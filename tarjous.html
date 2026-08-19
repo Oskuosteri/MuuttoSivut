@@ -13,7 +13,7 @@
 <nav>
   <div class="logo">
     <div class="logo-icon">
-      <a href="index.html"><img src="images/Designer (13).PNG" alt="Pispalan Muuttopalvelu Oy logo" width="48" height="32" style="width: 62px; height: 34px; object-fit:cover; display:block;"/></a>
+      <a href="index.html"><img src="images/Designer (13).PNG" alt="Pispalan Muuttopalvelu Oy logo" width="48" height="32" style="width: 62px; height: auto; object-fit:cover; display:block;"/></a>
     </div>
     <div class="logo-text">
       <span>Pispalan</span>
@@ -25,8 +25,8 @@
     <li><a href="index.html">Etusivu</a></li>
     <li><a href="index.html#palvelut">Palvelut</a></li>
     <li><a href="index.html">Lainalaatikot</a></li>
-    <li><a href="index.html#tietoa-meista">Tietoa meistä</a></li>
-    <li><a href="pyyda-tarjous.html" class="active">Pyydä tarjous</a></li>
+    <li><a href="index.html#tietoa-meistä">Tietoa meistä</a></li>
+    <li><a href="yhteydenotto.html" class="active">Yhteystiedot</a></li>
   </ul>
 
   <a href="#tarjous.html" class="btn btn-primary">Pyydä tarjous</a>
@@ -112,18 +112,18 @@
         <h2>Mistä muutetaan</h2>
         <div class="form-row">
           <div class="form-group">
-            <label>Lähtöosoite huoneistonumeroineen</label>
-            <input type="text" name="Lähtöosoite">
+            <label>Lähtöosoite huoneistonumeroineen <span class="req">*</span> </label>
+            <input type="text" name="Lähtöosoite" required>
           </div>
           <div class="form-group">
-            <label>Postinumero ja -toimipaikka</label>
-            <input type="text" name="Lähtö_postinumero">
+            <label>Postinumero ja -toimipaikka <span class="req">*</span></label>
+            <input type="text" name="Lähtö_postinumero" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Talotyyppi</label>
-            <div class="radio-group">
+            <label>Talotyyppi <span class="req">*</span></label>
+            <div class="radio-group required">
               <label class="radio-item"><input type="radio" name="Lähtö_talotyyppi" value="Omakotitalo">Omakotitalo</label>
               <label class="radio-item"><input type="radio" name="Lähtö_talotyyppi" value="Rivi-/paritalo">Rivi-/paritalo</label>
               <label class="radio-item"><input type="radio" name="Lähtö_talotyyppi" value="Kerrostalo">Kerrostalo</label>
@@ -133,28 +133,28 @@
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Kerros</label>
-            <input type="text" name="Lähtö_kerros">
+            <label>Kerros <span class="req">*</span> </label>
+            <input type="text" name="Lähtö_kerros" required>
           </div>
           <div class="form-group">
-            <label>Pinta-ala (m²)</label>
-            <input type="number" name="Lähtö_pinta_ala">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Muuttoajankohta</label>
-            <input type="date" name="Muuttoajankohta">
-          </div>
-          <div class="form-group">
-            <label>Muuttavien asukkaiden henkilömäärä</label>
-            <input type="number" name="Henkilömäärä">
+            <label>Pinta-ala (m²) <span class="req">*</span></label>
+            <input type="number" name="Lähtö_pinta_ala" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Hissi</label>
-            <div class="radio-group">
+            <label>Muuttoajankohta <span class="req">*</span></label>
+            <input type="date" name="Muuttoajankohta" required>
+          </div>
+          <div class="form-group">
+            <label>Muuttavien asukkaiden henkilömäärä <span class="req">*</span></label>
+            <input type="number" name="Henkilömäärä" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Hissi <span class="req">*</span></label>
+            <div class="radio-group" required>
               <label class="radio-item"><input type="radio" name="Lähtö_hissi" value="Kyllä">Kyllä</label>
               <label class="radio-item"><input type="radio" name="Lähtö_hissi" value="Ei">Ei</label>
             </div>
@@ -179,18 +179,18 @@
         <h2>Minne muutetaan</h2>
         <div class="form-row">
           <div class="form-group">
-            <label>Uusi osoite huoneistonumeroineen</label>
-            <input type="text" name="Kohdeosoite">
+            <label>Uusi osoite huoneistonumeroineen <span class="req">*</span></label>
+            <input type="text" name="Kohdeosoite" required>
           </div>
           <div class="form-group">
-            <label>Postinumero ja -toimipaikka</label>
-            <input type="text" name="Kohde_postinumero">
+            <label>Postinumero ja -toimipaikka <span class="req">*</span></label>
+            <input type="text" name="Kohde_postinumero" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Talotyyppi</label>
-            <div class="radio-group">
+            <label>Talotyyppi <span class="req">*</span></label>
+            <div class="radio-group" required>
               <label class="radio-item"><input type="radio" name="Kohde_talotyyppi" value="Omakotitalo">Omakotitalo</label>
               <label class="radio-item"><input type="radio" name="Kohde_talotyyppi" value="Rivi-/paritalo">Rivi-/paritalo</label>
               <label class="radio-item"><input type="radio" name="Kohde_talotyyppi" value="Kerrostalo">Kerrostalo</label>
@@ -200,18 +200,18 @@
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Kerros</label>
-            <input type="text" name="Kohde_kerros">
+            <label>Kerros <span class="req">*</span></label>
+            <input type="text" name="Kohde_kerros" required>
           </div>
           <div class="form-group">
-            <label>Pinta-ala (m²)</label>
-            <input type="number" name="Kohde_pinta_ala">
+            <label>Pinta-ala (m²) <span class="req">*</span></label>
+            <input type="number" name="Kohde_pinta_ala" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Hissi</label>
-            <div class="radio-group">
+            <label>Hissi <span class="req">*</span></label>
+            <div class="radio-group" required>
               <label class="radio-item"><input type="radio" name="Kohde_hissi" value="Kyllä">Kyllä</label>
               <label class="radio-item"><input type="radio" name="Kohde_hissi" value="Ei">Ei</label>
             </div>
@@ -247,8 +247,8 @@
         <h2>Yrityksen tiedot</h2>
         <div class="form-row">
           <div class="form-group">
-            <label>Yrityksen nimi</label>
-            <input type="text" name="Yrityksen_nimi">
+            <label>Yrityksen nimi <span class="req">*</span></label>
+            <input type="text" name="Yrityksen_nimi" required>
           </div>
           <div class="form-group">
             <label>Yhteyshenkilön nimi</label>
@@ -257,18 +257,18 @@
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Y-tunnus</label>
+            <label>Y-tunnus </label>
             <input type="text" name="Y-tunnus">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Lähiosoite</label>
-            <input type="text" name="Yritys_osoite">
+            <label>Lähiosoite <span class="req">*</span></label>
+            <input type="text" name="Yritys_osoite" required>
           </div>
           <div class="form-group">
-            <label>Postinumero ja -toimipaikka</label>
-            <input type="text" name="Yritys_postinumero">
+            <label>Postinumero ja -toimipaikka <span class="req">*</span></label>
+            <input type="text" name="Yritys_postinumero" required>
           </div>
         </div>
       </div>
@@ -290,8 +290,8 @@
             <input type="number" name="Työpistemäärä">
           </div>
           <div class="form-group">
-            <label>Toivottu toteutusaika</label>
-            <input type="date" name="Yritys_toteutusaika">
+            <label>Toivottu toteutusaika <span class="req">*</span></label>
+            <input type="date" name="Yritys_toteutusaika" required>
           </div>
         </div>
         <div class="form-row single">
@@ -309,38 +309,38 @@
         <h2>Muuttolaatikoiden vuokraustiedot</h2>
         <div class="form-row">
           <div class="form-group">
-            <label>Toimitusosoite</label>
-            <input type="text" name="Laatikot_osoite">
+            <label>Toimitusosoite <span class="req">*</span></label>
+            <input type="text" name="Laatikot_osoite" required>
           </div>
           <div class="form-group">
-            <label>Postinumero ja -toimipaikka</label>
-            <input type="text" name="Laatikot_postinumero">
+            <label>Postinumero ja -toimipaikka <span class="req">*</span></label>
+            <input type="text" name="Laatikot_postinumero" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Tarvittava laatikkomäärä (arvio)</label>
-            <input type="number" name="Laatikkomäärä">
+            <label>Tarvittava laatikkomäärä (arvio) <span class="req">*</span></label>
+            <input type="number" name="Laatikkomäärä" required>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label>Talouden koko (huoneita)</label>
             <input type="text" name="Laatikot_kokoluokka">
+          </div> -->
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Vuokra-aika alkaa <span class="req">*</span></label>
+            <input type="date" name="Vuokra_alkaa" required>
+          </div>
+          <div class="form-group">
+            <label>Vuokra-aika päättyy <span class="req">*</span></label>
+            <input type="date" name="Vuokra_paattyy" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Vuokra-aika alkaa</label>
-            <input type="date" name="Vuokra_alkaa">
-          </div>
-          <div class="form-group">
-            <label>Vuokra-aika päättyy</label>
-            <input type="date" name="Vuokra_paattyy">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Toimitustapa</label>
-            <div class="radio-group">
+            <label>Toimitustapa  <span class="req">*</span></label>
+            <div class="radio-group" required>
               <label class="radio-item"><input type="radio" name="Toimitustapa" value="Kotiinkuljetus">Kotiinkuljetus</label>
               <label class="radio-item"><input type="radio" name="Toimitustapa" value="Nouto itse">Nouto itse</label>
             </div>
@@ -361,22 +361,22 @@
         <h2>Kokouspalvelun tiedot</h2>
         <div class="form-row">
           <div class="form-group">
-            <label>Haettava/ toimitettava tuote</label>
-            <input type="text" name="Tuote">
+            <label>Haettava/ toimitettava tuote  <span class="req">*</span></label>
+            <input type="text" name="Tuote" required>
           </div>
           <div class="form-group">
-            <label>Haku osoite/ yritys</label>
-            <input type="text" name="Tavaran hakupaikka tai yritys">
+            <label>Haku osoite/ yritys <span class="req">*</span></label>
+            <input type="text" name="Tavaran hakupaikka tai yritys" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Toivottu ajankohta</label>
-            <input type="date" name="Toivottu ajankohta">
+            <label>Toivottu ajankohta <span class="req">*</span></label>
+            <input type="date" name="Toivottu ajankohta" required>
           </div>
           <div class="form-group">
-            <label>Nouto linkki/ viesti</label>
-            <input type="text" name="Nouto koodi/teksti/kuva" placeholder="esim. Kuva noutoviestistä">
+            <label>Nouto linkki/ viesti <span class="req">*</span>  </label>
+            <input type="text" name="Nouto koodi/teksti/kuva" placeholder="esim. Kuva noutoviestistä" required>
           </div>
         </div>
         <div class="form-row single">
@@ -417,7 +417,7 @@
     <div class="footer-brand">
       <div class="logo">
         <div class="logo-icon">
-          <a href="index.html"><img src="images/Designer (13).PNG" alt="Pispalan Muuttopalvelu Oy logo" style="width: 38px; height: 24px; object-fit:cover; display:block;"/></a>
+          <a href="index.html"><img src="images/Designer (13).PNG" alt="Pispalan Muuttopalvelu Oy logo" style="width: 38px; height: auto; object-fit:cover; display:block;"/></a>
         </div>
         <div class="logo-text">
           <span>Pispalan</span>
@@ -456,10 +456,10 @@
       <h4>Yritys</h4>
       <ul>
         <li><a href="index.html">Etusivu</a></li>
-        <li><a href="index.html#tietoa-meista">Tietoa meistä</a></li>
-        <li><a href="#">Hinnat</a></li>
-        <li><a href="#">Arvostelut</a></li>
-        <li><a href="pyyda-tarjous.html">Yhteys</a></li>
+        <li><a href="index.html#tietoa-meistä">Tietoa meistä</a></li>
+        <!-- <li><a href="#">Hinnat</a></li> -->
+        <li><a href="https://extra.muuttomaailma.fi/company/k70j0opk">Arvostelut</a></li>
+        <li><a href="yhteydenotto.html">Yhteystiedot</a></li>
       </ul>
     </div>
 
@@ -498,9 +498,9 @@
   <div class="footer-bottom">
     <span>© 2026 Pispalan Muuttopalvelu Oy. Kaikki oikeudet pidätetään.</span>
     <div class="footer-bottom-links">
-      <a href="#">Tietosuojaseloste</a>
-      <a href="#">Käyttöehdot</a>
-      <a href="#">Evästeet</a>
+      <a href="tietosuojaseloste.html">Tietosuojaseloste</a>
+      <a href="kayttoehdot.html">Käyttöehdot</a>
+      <a href="evasteet.html">Evästeet</a>
     </div>
   </div>
 </footer>
@@ -508,7 +508,7 @@
 <div class="footer-trust-bar">
   <div class="footer-trust-item">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    Vakuutettu muutto
+    Turvallinen muutto
   </div>
   <div class="footer-trust-item">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>

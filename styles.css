@@ -44,13 +44,6 @@
       letter-spacing: 0.02em;
     }
 
-    /* .logo-icon {
-      background: var(--red);
-      border-radius: 6px;
-      padding: 6px 8px;
-      display: flex;
-      align-items: center;
-    } */
 
     .logo-icon svg { width: 28px; height: 20px; fill: white; }
 

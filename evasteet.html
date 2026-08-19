@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evästeet | Pispalan Muuttopalvelu Oy</title>
+  <meta name="description" content="Tietoa Pispalan Muuttopalvelu Oy:n verkkosivuston evästeiden ja vastaavien tekniikoiden käytöstä." />
+  <meta name="robots" content="noindex, follow" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #D92B2B; --red-dark: #B51F1F; --black: #1A1A1A; --gray-text: #555;
+      --gray-light: #f5f5f5; --border: #e5e5e5; --white: #ffffff; --max-w: 1240px;
+    }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; color: var(--black); background: var(--white); line-height: 1.6; }
+    a { text-decoration: none; color: var(--red); }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 32px; }
+
+    nav { background: var(--white); position: sticky; top: 0; z-index: 100; }
+    nav .container { display: flex; align-items: center; justify-content: space-between; height: 100px; }
+    .logo { display: flex; align-items: center; gap: 15px; font-weight: 800; font-size: 15px; color: var(--red); text-transform: uppercase; letter-spacing: 0.02em; }
+    .logo-icon img { width: 58px; height: auto; display: block; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .logo-text span:first-child { font-size: 28px; }
+    .logo-text span:last-child { font-size: 18px; letter-spacing: 0.1em; color: var(--black); }
+    .nav-links { display: flex; gap: 32px; list-style: none; font-size: 18px; font-weight: 500; }
+    .nav-links a { color: var(--black); }
+    .nav-links a:hover { color: var(--red); text-decoration: none; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 11px 24px; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; border: 2px solid transparent; }
+    .btn-primary { background: var(--red); color: white; }
+    .btn-primary:hover { background: var(--red-dark); text-decoration: none; }
+    .divider { width: 60px; height: 1px; background: var(--border); margin: 0 auto; }
+
+    .breadcrumb { padding: 20px 32px 0; font-size: 13px; color: var(--gray-text); }
+    .breadcrumb span { margin: 0 6px; color: #bbb; }
+
+    .legal-hero { padding: 32px 32px 8px; text-align: center; }
+    .legal-hero h1 { font-size: 36px; font-weight: 800; margin-bottom: 10px; }
+    .legal-hero p { color: var(--gray-text); font-size: 14px; }
+
+    .legal-content { padding: 24px 32px 64px; }
+    .legal-content .container { max-width: 760px; }
+    .legal-content h2 { font-size: 20px; font-weight: 700; margin: 32px 0 10px; }
+    .legal-content h2:first-child { margin-top: 0; }
+    .legal-content p, .legal-content li { font-size: 15px; color: var(--gray-text); line-height: 1.75; margin-bottom: 10px; }
+    .legal-content ul { padding-left: 20px; margin-bottom: 10px; }
+    .legal-content strong { color: var(--black); }
+    .notice-box { background: var(--gray-light); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; margin-bottom: 28px; font-size: 14px; color: var(--gray-text); }
+    .notice-box strong { color: var(--black); }
+
+    table.cookie-table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 14px; }
+    table.cookie-table th, table.cookie-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    table.cookie-table th { color: var(--black); font-weight: 700; }
+    table.cookie-table td { color: var(--gray-text); }
+
+    .site-footer { background: #1A1A1A; color: #ccc; padding: 40px 32px; text-align: center; font-size: 13px; }
+    .site-footer a { color: #ccc; }
+    .site-footer a:hover { color: var(--red); }
+
+    @media (max-width: 900px) {
+      .container { padding: 0 20px; }
+      .nav-links { display: none; }
+      .legal-hero h1 { font-size: 28px; }
+      table.cookie-table { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="logo">
+      <div class="logo-icon"><a href="index.html"><img src="images/Designer (13).PNG" alt="Pispalan Muuttopalvelu Oy logo"/></a></div>
+      <div class="logo-text"><span>Pispalan</span><span>Muuttopalvelu</span></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Etusivu</a></li>
+      <li><a href="index.html#palvelut">Palvelut</a></li>
+      <li><a href="lainalaatikot.html">Lainalaatikot</a></li>
+      <li><a href="index.html#tietoa-meistä">Tietoa meistä</a></li>
+      <li><a href="pyyda-tarjous.html">Yhteystiedot</a></li>
+    </ul>
+    <a href="tarjous.html" class="btn btn-primary">Pyydä tarjous</a>
+  </div>
+</nav>
+<div class="divider" style="margin-top:0;"></div>
+
+<div class="breadcrumb">
+  <div class="container" style="padding:0;">
+    <a href="index.html">Etusivu</a><span>/</span>
+    <a href="#" style="color:var(--black); font-weight:600;">Evästeet</a>
+  </div>
+</div>
+
+<section class="legal-hero">
+  <div class="container">
+    <h1>Evästeet</h1>
+    <p>Päivitetty 19.8.2026</p>
+  </div>
+</section>
+
+<section class="legal-content">
+  <div class="container">
+
+
+    <h2>1. Mitä evästeet ovat</h2>
+    <p>Evästeet ovat pieniä tekstitiedostoja, joita verkkosivusto voi tallentaa selaimeesi. Niitä käytetään esimerkiksi sivuston toiminnan mahdollistamiseen tai kolmannen osapuolen sisällön, kuten karttojen, näyttämiseen.</p>
+
+    <h2>2. Sivustomme evästeiden käyttö</h2>
+    <p>Tämä sivusto ei tällä hetkellä käytä omia seuranta- tai markkinointievästeitä eikä kävijäanalytiikkaa. Sivustolla käytetään seuraavia kolmannen osapuolen palveluita, jotka voivat käsitellä tietoja tai asettaa evästeitä omien käytäntöjensä mukaisesti:</p>
+
+    <table class="cookie-table">
+      <tr><th>Palvelu</th><th>Käyttötarkoitus</th><th>Tietoja</th></tr>
+      <tr>
+        <td>Google Fonts</td>
+        <td>Sivuston fonttien lataus</td>
+        <td>Selaimesi lataa fontit Googlen palvelimelta, jolloin IP-osoitteesi välittyy Googlelle. Ei aseta evästeitä.</td>
+      </tr>
+      <tr>
+        <td>Google Maps</td>
+        <td>Kartta yhteystietosivulla</td>
+        <td>Upotettu kartta voi asettaa evästeitä ja käsitellä tietoja Googlen omien käytäntöjen mukaisesti.</td>
+      </tr>
+      <tr>
+        <td>Formspree</td>
+        <td>Tarjouspyyntölomakkeen käsittely</td>
+        <td>Käsittelee lomakkeella lähettämäsi tiedot; ks. tarkemmin tietosuojaselosteestamme.</td>
+      </tr>
+    </table>
+
+    <h2>3. Evästeiden hallinta</h2>
+    <p>Voit hallita tai estää evästeitä selaimesi asetuksista. Huomaa, että joidenkin kolmannen osapuolen sisältöjen, kuten kartan, toiminta voi heiketä, jos estät niihin liittyvät evästeet.</p>
+
+    <h2>4. Lisätietoa</h2>
+    <p>Henkilötietojen käsittelystä yleisemmin kerrotaan <a href="tietosuojaseloste.html">tietosuojaselosteessamme</a>.</p>
+
+    <h2>5. Muutokset tähän sivuun</h2>
+    <p>Päivitämme tätä sivua, jos sivustolle otetaan käyttöön uusia evästeitä tai seurantatekniikoita.</p>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container" style="padding:0;">
+    © 2026 Pispalan Muuttopalvelu Oy · <a href="tietosuojaseloste.html">Tietosuojaseloste</a> · <a href="kayttoehdot.html">Käyttöehdot</a> · <a href="index.html">Etusivulle</a>
+  </div>
+</footer>
+
+</body>
+</html>

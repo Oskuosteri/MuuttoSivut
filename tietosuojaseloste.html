@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tietosuojaseloste | Pispalan Muuttopalvelu Oy</title>
+  <meta name="description" content="Pispalan Muuttopalvelu Oy:n tietosuojaseloste – miten käsittelemme henkilötietoja tarjouspyyntöjen yhteydessä." />
+  <meta name="robots" content="noindex, follow" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #D92B2B; --red-dark: #B51F1F; --black: #1A1A1A; --gray-text: #555;
+      --gray-light: #f5f5f5; --border: #e5e5e5; --white: #ffffff; --max-w: 1240px;
+    }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; color: var(--black); background: var(--white); line-height: 1.6; }
+    a { text-decoration: none; color: var(--red); }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 32px; }
+
+    nav { background: var(--white); position: sticky; top: 0; z-index: 100; }
+    nav .container { display: flex; align-items: center; justify-content: space-between; height: 100px; }
+    .logo { display: flex; align-items: center; gap: 15px; font-weight: 800; font-size: 15px; color: var(--red); text-transform: uppercase; letter-spacing: 0.02em; }
+    .logo-icon img { width: 58px; height: auto; display: block; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .logo-text span:first-child { font-size: 28px; }
+    .logo-text span:last-child { font-size: 18px; letter-spacing: 0.1em; color: var(--black); }
+    .nav-links { display: flex; gap: 32px; list-style: none; font-size: 18px; font-weight: 500; }
+    .nav-links a { color: var(--black); }
+    .nav-links a:hover { color: var(--red); text-decoration: none; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 11px 24px; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; border: 2px solid transparent; }
+    .btn-primary { background: var(--red); color: white; }
+    .btn-primary:hover { background: var(--red-dark); text-decoration: none; }
+    .divider { width: 60px; height: 1px; background: var(--border); margin: 0 auto; }
+
+    .breadcrumb { padding: 20px 32px 0; font-size: 13px; color: var(--gray-text); }
+    .breadcrumb span { margin: 0 6px; color: #bbb; }
+
+    .legal-hero { padding: 32px 32px 8px; text-align: center; }
+    .legal-hero h1 { font-size: 36px; font-weight: 800; margin-bottom: 10px; }
+    .legal-hero p { color: var(--gray-text); font-size: 14px; }
+
+    .legal-content { padding: 24px 32px 64px; }
+    .legal-content .container { max-width: 760px; }
+    .legal-content h2 { font-size: 20px; font-weight: 700; margin: 32px 0 10px; }
+    .legal-content h2:first-child { margin-top: 0; }
+    .legal-content p, .legal-content li { font-size: 15px; color: var(--gray-text); line-height: 1.75; margin-bottom: 10px; }
+    .legal-content ul { padding-left: 20px; margin-bottom: 10px; }
+    .legal-content strong { color: var(--black); }
+    .notice-box { background: var(--gray-light); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; margin-bottom: 28px; font-size: 14px; color: var(--gray-text); }
+    .notice-box strong { color: var(--black); }
+    .placeholder { background: #fff3f3; border: 1px dashed var(--red); border-radius: 6px; padding: 1px 6px; color: var(--red-dark); font-weight: 600; }
+
+    .site-footer { background: #1A1A1A; color: #ccc; padding: 40px 32px; text-align: center; font-size: 13px; }
+    .site-footer a { color: #ccc; }
+    .site-footer a:hover { color: var(--red); }
+
+    @media (max-width: 900px) {
+      .container { padding: 0 20px; }
+      .nav-links { display: none; }
+      .legal-hero h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="logo">
+      <div class="logo-icon"><a href="index.html"><img src="images/Designer (13).PNG" alt="Pispalan Muuttopalvelu Oy logo"/></a></div>
+      <div class="logo-text"><span>Pispalan</span><span>Muuttopalvelu</span></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Etusivu</a></li>
+      <li><a href="index.html#palvelut">Palvelut</a></li>
+      <li><a href="lainalaatikot.html">Lainalaatikot</a></li>
+      <li><a href="index.html#tietoa-meistä">Tietoa meistä</a></li>
+      <li><a href="yhteydenotto.html">Yhteystiedot</a></li>
+    </ul>
+    <a href="tarjous.html" class="btn btn-primary">Pyydä tarjous</a>
+  </div>
+</nav>
+<div class="divider" style="margin-top:0;"></div>
+
+<div class="breadcrumb">
+  <div class="container" style="padding:0;">
+    <a href="index.html">Etusivu</a><span>/</span>
+    <a href="#" style="color:var(--black); font-weight:600;">Tietosuojaseloste</a>
+  </div>
+</div>
+
+<section class="legal-hero">
+  <div class="container">
+    <h1>Tietosuojaseloste</h1>
+    <p>Päivitetty 19.8.2026</p>
+  </div>
+</section>
+
+<section class="legal-content">
+  <div class="container">
+
+    <h2>1. Rekisterinpitäjä</h2>
+    <p>
+      Pispalan Muuttopalvelu Oy<br>
+      Pispalan valtatie 27, Tampere<br>
+      Y-tunnus: 1653354-9<br>
+      Puhelin: <a href="tel:+358405082820">040 508 2820</a><br>
+      Sähköposti: <a href="mailto:tampere@lainalaatikko.fi">tampere@lainalaatikko.fi</a>
+    </p>
+
+    <h2>2. Mitä henkilötietoja käsittelemme</h2>
+    <p>Käsittelemme henkilötietoja, jotka annat itse tarjouspyyntölomakkeella tai olemalla meihin muutoin yhteydessä. Näitä voivat olla:</p>
+    <ul>
+      <li>Nimi, puhelinnumero ja sähköpostiosoite</li>
+      <li>Muuttoon liittyvät osoite- ja aikataulutiedot (lähtö- ja kohdeosoite, muuttopäivä, asunnon tiedot)</li>
+      <li>Yritysmuuton yhteydessä yrityksen nimi ja Y-tunnus, jos annat ne lomakkeella</li>
+      <li>Muut lomakkeella vapaaehtoisesti antamasi lisätiedot, kuten kuva noutoviestistä</li>
+    </ul>
+    <p>Emme kerää tietoja, joita et itse anna meille lomakkeen kautta.</p>
+
+    <h2>3. Käsittelyn tarkoitus ja oikeusperuste</h2>
+    <p>Käsittelemme tietoja tarjouspyyntöösi vastaamiseksi ja mahdollisen muuttopalvelusopimuksen valmistelemiseksi. Käsittelyn oikeusperusteena on sopimuksen valmistelu tai täytäntöönpano (EU:n yleinen tietosuoja-asetus, 6 artiklan 1 kohdan b-alakohta) sekä tarvittaessa suostumuksesi lomakkeen lähettämisen yhteydessä.</p>
+
+    <h2>4. Mihin tietoja luovutetaan</h2>
+    <p>Tarjouspyyntölomake toimitetaan sähköpostiimme Formspree-nimisen kolmannen osapuolen lomakepalvelun kautta. Formspree saattaa käsitellä ja tilapäisesti tallentaa tietoja EU/ETA-alueen ulkopuolella (Yhdysvalloissa), jolloin sovelletaan asianmukaisia suojatoimia, kuten EU:n vakiosopimuslausekkeita. Lisätietoa: <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">Formspreen tietosuojakäytäntö</a>.</p>
+    <p>Sivustollamme käytetään myös Google Fontsia (fonttien lataus) ja Google Mapsia (kartta yhteystietosivulla), jolloin selaimesi voi olla yhteydessä Googlen palvelimiin. Lisätietoa: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googlen tietosuojakäytäntö</a>.</p>
+    <p>Emme myy tai luovuta henkilötietojasi markkinointitarkoituksiin kolmansille osapuolille.</p>
+
+    <h2>5. Tietojen säilytysaika</h2>
+    <p>Säilytämme tarjouspyyntöön liittyviä tietoja niin kauan kuin se on tarpeen yhteydenottosi käsittelemiseksi ja mahdollisen asiakassuhteen hoitamiseksi, minkä jälkeen tiedot poistetaan kohtuullisessa ajassa, ellei kirjanpitolainsäädäntö tai muu lakisääteinen velvoite edellytä pidempää säilytysaikaa.</p>
+
+    <h2>6. Oikeutesi</h2>
+    <p>Sinulla on oikeus:</p>
+    <ul>
+      <li>saada tietoa sinusta tallennetuista henkilötiedoista</li>
+      <li>pyytää virheellisen tiedon oikaisemista</li>
+      <li>pyytää tietojen poistamista, mikäli niiden käsittelylle ei ole enää perustetta</li>
+      <li>vastustaa käsittelyä tai pyytää sen rajoittamista</li>
+      <li>tehdä valitus valvontaviranomaiselle, Suomessa <a href="https://tietosuoja.fi" target="_blank" rel="noopener">tietosuojavaltuutetun toimistolle</a></li>
+    </ul>
+    <p>Voit käyttää oikeuksiasi ottamalla meihin yhteyttä yllä olevilla yhteystiedoilla.</p>
+
+    <h2>7. Muutokset tähän selosteeseen</h2>
+    <p>Voimme päivittää tätä selostetta esimerkiksi lainsäädännön muuttuessa tai toimintamme kehittyessä. Suosittelemme tarkistamaan sivun ajoittain.</p>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container" style="padding:0;">
+    © 2026 Pispalan Muuttopalvelu Oy · <a href="kayttoehdot.html">Käyttöehdot</a> · <a href="evasteet.html">Evästeet</a> · <a href="index.html">Etusivulle</a>
+  </div>
+</footer>
+
+</body>
+</html>

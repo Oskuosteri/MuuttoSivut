@@ -84,7 +84,7 @@
       --gray-light: #f5f5f5;
       --border: #e5e5e5;
       --white: #ffffff;
-      --max-w: 1040px;
+      --max-w: 1240px;
     }
 
     html, body { max-width: 100%; overflow-x: hidden; }
@@ -100,7 +100,7 @@
 
     .container { max-width: var(--max-w); margin: 0 auto; padding: 0 32px; }
 
-    /* ── NAVBAR ── */
+
     nav { background: var(--white); position: sticky; top: 0; z-index: 100; }
     nav .container { display: flex; align-items: center; justify-content: space-between; height: 100px; }
 
@@ -123,12 +123,12 @@
 
     .divider { width: 60px; height: 1px; background: var(--border); margin: 0 auto; }
 
-    /* ── BREADCRUMB ── */
+  
     .breadcrumb { padding: 20px 32px 0; font-size: 13px; color: var(--gray-text); }
     .breadcrumb a:hover { color: var(--red); }
     .breadcrumb span { margin: 0 6px; color: #bbb; }
 
-    /* ── PAGE HERO ── */
+
     .page-hero { padding: 32px 32px 48px; text-align: center; }
     .page-hero .container { display: flex; flex-direction: column; align-items: center; }
     .page-hero .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
@@ -136,7 +136,7 @@
     .page-hero h1 span { color: var(--red); }
     .page-hero p { font-size: 18px; color: var(--gray-text); max-width: 620px; }
 
-    /* ── CONTACT SECTION ── */
+
     .contact-section { padding: 24px 32px 64px; }
     .contact-section .container { max-width: 980px; }
 
@@ -153,7 +153,7 @@
     .map-wrap { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); min-height: 340px; }
     .map-wrap iframe { width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
 
-    /* ── AREA & FAQ ── */
+
     .info-section { padding: 8px 32px 56px; }
     .info-section .container { max-width: 860px; }
     .info-section h2 { font-size: 26px; font-weight: 800; margin-bottom: 8px; text-align: center; }
@@ -168,13 +168,12 @@
     .faq-item h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
     .faq-item p { font-size: 14px; color: var(--gray-text); line-height: 1.7; }
 
-    /* ── CTA BANNER ── */
     .cta-banner { background: var(--black); padding: 56px 32px; }
     .cta-banner .container { max-width: 720px; text-align: center; }
     .cta-banner h2 { color: white; font-size: 28px; font-weight: 800; margin-bottom: 10px; }
     .cta-banner p { color: #ccc; font-size: 15px; margin-bottom: 24px; }
 
-    /* ── FULL FOOTER ── */
+    /* footter */
     .site-footer { background: #1A1A1A; color: #ccc; padding: 64px 32px 0; }
     .site-footer .container { padding: 0; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid #333; }
@@ -242,8 +241,8 @@
       <li><a href="index.html">Etusivu</a></li>
       <li><a href="index.html#palvelut">Palvelut</a></li>
       <li><a href="lainalaatikot.html">Lainalaatikot</a></li>
-      <li><a href="index.html#tietoa-meista">Tietoa meistä</a></li>
-      <li><a href="pyyda-tarjous.html" class="active">Yhteys</a></li>
+      <li><a href="index.html#tietoa-meistä">Tietoa meistä</a></li>
+      <li><a href="yhteydenotto.html" class="active">Yhteystiedot</a></li>
     </ul>
 
     <a href="tarjous.html" class="btn btn-primary">Pyydä tarjous</a>
@@ -314,7 +313,7 @@
             </svg>
           </div>
           <h3>Aukioloajat</h3>
-          <p>Ma–Pe 9:00–16:00<br>La–Su Suljettu</p>
+          <p>Ma 9:00–11:00 13:30-15:30<br>Ti-Pe 9:00–11:00 13:30-16:00 <br> La–Su Suljettu</p>
         </div>
       </div>
 
@@ -385,7 +384,7 @@
       <div class="footer-brand">
         <div class="logo">
           <div class="logo-icon">
-            <a href="index.html"><img src="images/Designer (13).PNG" alt="Pispalan Muuttopalvelu Oy logo" style="width: 38px; height: 24px; object-fit:cover; display:block;"/></a>
+            <a href="index.html"><img src="images/Designer (13).PNG" alt="Pispalan Muuttopalvelu Oy logo" style="width: 38px; height: auto; object-fit:cover; display:block;"/></a>
           </div>
           <div class="logo-text">
             <span>Pispalan</span>
@@ -424,10 +423,10 @@
         <h4>Yritys</h4>
         <ul>
           <li><a href="index.html">Etusivu</a></li>
-          <li><a href="index.html#tietoa-meista">Tietoa meistä</a></li>
-          <li><a href="#">Hinnat</a></li>
-          <li><a href="#">Arvostelut</a></li>
-          <li><a href="pyyda-tarjous.html">Yhteys</a></li>
+          <li><a href="index.html#tietoa-meistä">Tietoa meistä</a></li>
+          <!-- <li><a href="#">Hinnat</a></li> -->
+          <li><a href="https://extra.muuttomaailma.fi/company/k70j0opk">Arvostelut</a></li>
+          <li><a href="yhteydenotto.html">Yhteystiedot</a></li>
         </ul>
       </div>
 
@@ -458,7 +457,7 @@
             <circle cx="12" cy="12" r="10"/>
             <polyline points="12 6 12 12 16 14"/>
           </svg>
-          <span>Ma–Pe 9:00–16:00<br>La–Su Suljettu</span>
+          <span>Ma 9:00–11:00 13:30-15:30<br>Ti-Pe 9:00–11:00 13:30-16:00 <br> La–Su Suljettu</span>
         </div>
       </div>
     </div>
@@ -466,9 +465,9 @@
     <div class="footer-bottom">
       <span>© 2026 Pispalan Muuttopalvelu Oy. Kaikki oikeudet pidätetään.</span>
       <div class="footer-bottom-links">
-        <a href="#">Tietosuojaseloste</a>
-        <a href="#">Käyttöehdot</a>
-        <a href="#">Evästeet</a>
+        <a href="tietosuojaseloste.html">Tietosuojaseloste</a>
+        <a href="kayttoehdot.html">Käyttöehdot</a>
+        <a href="evasteet.html">Evästeet</a>
       </div>
     </div>
   </div>
@@ -479,7 +478,7 @@
   <div class="container">
     <div class="footer-trust-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Vakuutettu muutto
+      Turvallinen muutto
     </div>
     <div class="footer-trust-item">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
