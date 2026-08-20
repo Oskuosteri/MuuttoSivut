@@ -761,7 +761,7 @@
     .success-box p { font-size: 14px; color: var(--gray-text); }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
+    @media (max-width: 960px) {
       nav { padding: 0 20px; }
       .nav-links { display: none; }
       nav .btn-primary { display: none; }
