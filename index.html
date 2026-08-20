@@ -71,14 +71,13 @@
 
     a { text-decoration: none; color: inherit; }
 
-    /* ── CONTAINER ── */
+
     .container {
       max-width: var(--max-w);
       margin: 0 auto;
       padding: 0 32px;
     }
 
-    /* ── NAVBAR ── */
     nav {
       background: var(--white);
       position: sticky;
@@ -153,7 +152,7 @@
     .btn-outline { background: white; color: var(--black); border-color: #ccc; }
     .btn-outline:hover { border-color: var(--red); color: var(--red); }
 
-    /* ── INTRO (replaces big hero) ── */
+
     .intro {
       padding: 144px 64px 128px;
       text-align: center;
@@ -200,7 +199,7 @@
 
     .star-icons { color: #f59e0b; font-size: 24px; letter-spacing: 2px; }
 
-    /* ── FEATURES ── */
+
     .features {
       padding: 48px 32px;
     }
@@ -237,7 +236,7 @@
       line-height: 1.6;
     }
 
-    /* ── SERVICES ── */
+
     .services {
       padding: 64px 32px;
       background: var(--white);
@@ -260,7 +259,7 @@
       border-radius: 2px;
     }
 
-    /* ── SHORT SECTION DIVIDER (replaces full-width borders) ── */
+
     .divider {
       width: 60px;
       height: 1px;
@@ -316,7 +315,7 @@
     }
     .link-red:hover { gap: 8px; }
 
-    /* ── ABOUT ── */
+
     .about {
       padding: 64px 32px;
       background: var(--gray-light);
@@ -341,7 +340,6 @@
     .about-stat strong { display: block; font-size: 30px; font-weight: 800; color: var(--red); }
     .about-stat span { font-size: 14px; color: var(--gray-text); }
 
-    /* ── CTA BANNER ── */
     .cta-banner {
       background: var(--gray-light);
       padding: 64px 32px;
@@ -360,7 +358,7 @@
     .cta-content p { font-size: 14px; color: var(--gray-text); margin-bottom: 20px; }
     .cta-checklist { width: 80px; flex-shrink: 0; }
 
-    /* ── FULL FOOTER ── */
+    /* footter */
     .site-footer {
       background: #1A1A1A;
       color: #ccc;
@@ -425,9 +423,10 @@
     .footer-trust-item svg { width: 18px; height: 18px; color: var(--red); }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
+    @media (max-width: 960px) {
       .container { padding: 0 20px; }
       .nav-links { display: none; }
+      nav .btn-primary { padding: 12px 18px; font-size: 12px; border-radius: 5px;  white-space: nowrap; }
       .intro { padding: 48px 20px; }
       .intro h1 { font-size: 34px; }
       .features { padding: 32px 20px; }
@@ -447,6 +446,7 @@
       .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
     }
     @media (max-width: 560px) {
+      /* nav .btn-primary { padding: 10px 14px; font-size: 10px; border-radius: 5px; white-space: nowrap; margin-left: 5px; } */
       .footer-grid { grid-template-columns: 1fr; }
       .footer-trust-bar .container { justify-content: center; }
       .features-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -455,6 +455,25 @@
       .intro-ctas { flex-direction: column; width: 100%; }
       .intro-ctas .btn { width: 100%; }
       .about-stats { flex-wrap: wrap; gap: 20px; justify-content: center; }
+    }
+
+    @media (max-width: 400px) {
+      nav .btn-primary { padding: 10px 14px; font-size: 10px; border-radius: 5px; white-space: nowrap; margin-left: 5px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-trust-bar .container { justify-content: center; }
+      .features-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .intro h1 { font-size: 28px; }
+      .intro-ctas { flex-direction: column; width: 100%; }
+      .intro-ctas .btn { width: 100%; }
+      .about-stats { flex-wrap: wrap; gap: 20px; justify-content: center; }
+    }
+
+     @media (max-width: 350px) {
+      .logo-text span:first-child { font-size: 14px; }
+      .logo-text span:last-child { font-size: 14px; }
+      nav .btn-primary { padding: 10px 12px; font-size: 10px; border-radius: 5px; white-space: nowrap; margin-left: 5px; }
+
     }
   </style>
 </head>
@@ -486,7 +505,7 @@
 </nav>
 <div class="divider" style="margin-top: 0;"></div>
 
-<!-- INTRO (replaces big hero, no image, fully centered) -->
+<!-- INTRO  -->
 <div class="intro">
   <div class="container">
     <a href="#index.html"><img src="images/Designer (13).PNG" alt="Pispalan Muuttopalvelu Oy logo" style="width: 240px; height: auto;"/></a>

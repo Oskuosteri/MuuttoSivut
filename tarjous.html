@@ -490,7 +490,7 @@
           <circle cx="12" cy="12" r="10"/>
           <polyline points="12 6 12 12 16 14"/>
         </svg>
-        <span>Ma–Pe 9:00–16:00<br>La–Su Suljettu</span>
+        <span>Ma 9:00–11:00 13:30-15:30<br>Ti-Pe 9:00–11:00 13:30-16:00 <br> La–Su Suljettu</span>
       </div>
     </div>
   </div>
@@ -529,9 +529,7 @@
   const blocks = document.querySelectorAll('.service-block');
   const subjectField = document.getElementById('emailSubject');
 
-  // Disabloidaan (poistetaan lähetyksestä) kaikkien ei-aktiivisten
-  // palvelulohkojen kentät, jotta tyhjät/väärän palvelun tiedot eivät
-  // päädy sähköpostiin.
+
   function syncBlockFields() {
     blocks.forEach(block => {
       const isActive = block.classList.contains('active');
@@ -541,7 +539,7 @@
     });
   }
 
-  // Alustetaan heti sivun latauduttua (kotimuutto on oletuksena valittuna)
+
   syncBlockFields();
 
   tabs.forEach(tab => {
@@ -562,7 +560,7 @@
     });
   });
 
-  // AJAX submit to Formspree so we can show a friendly confirmation
+
   const form = document.getElementById('quoteForm');
   const successBox = document.getElementById('successBox');
 
